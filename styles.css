@@ -17,10 +17,10 @@ a{color:var(--accent); text-decoration:none;}
 a:hover{text-decoration:underline;}
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;}
 
-/* barras decorativas */
+
 .top-strip{background:linear-gradient(90deg,#c3b28f,#d4c3a8);height:12px;width:100%;}
 
-/* Pre-footer con color gradiente */
+
 .pre-footer-strip{
   background: linear-gradient(180deg, #ad966d, #c3b28f);
   width:100%;
