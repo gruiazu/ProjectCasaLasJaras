@@ -1,6 +1,6 @@
 :root{
   --sand:#f6efe4;
-  --accent:#7c6529;
+  --accent:#ad966d;
   --accent-2:#caa86a;
   --muted:#7a7a7a;
   --max-width:1100px;
@@ -18,11 +18,11 @@ a:hover{text-decoration:underline;}
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;}
 
 /* barras decorativas */
-.top-strip{background:linear-gradient(90deg,#b19e7f,#c3ad8f);height:12px;width:100%;}
+.top-strip{background:linear-gradient(90deg,#c3b28f,#d4c3a8);height:12px;width:100%;}
 
 /* Pre-footer con color gradiente */
 .pre-footer-strip{
-  background: linear-gradient(180deg, #9c8560, #b39c7c);
+  background: linear-gradient(180deg, #ad966d, #c3b28f);
   width:100%;
   padding:2rem 0;
   display:flex;
@@ -86,7 +86,7 @@ a:hover{text-decoration:underline;}
 /* Botones hero */
 .cta-row{margin-top:1rem;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer;}
-.btn.primary{background:linear-gradient(90deg,#ad966d,#987854);color:white;}
+.btn.primary{background:linear-gradient(90deg,#c3b28f,#ad966d);color:white;}
 
 /* Header */
 header {
@@ -136,12 +136,28 @@ nav.mainnav a{
 
 .hero{height:58vh;min-height:380px;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem 0;position:relative;overflow:hidden;}
 .hero::after{content:"";position:absolute;inset:0;background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.08));}
-.hero .bg{position:absolute;inset:0;background-image: url('casasalares.jpg');background-size: cover;background-position: center;}
+
+.hero .bg{
+  position:absolute;
+  inset:0;
+  background-image: url('images/casasalares.jpg');
+  background-size: cover; 
+  background-position: center; 
+}
 .hero .inner{position:relative;z-index:2;color:white;max-width:980px;padding:0 18px;}
 .hero h1{font-family:"Cinzel",serif;font-size:clamp(1.6rem,4vw,2.6rem);margin-bottom:0.6rem;text-shadow:0 6px 20px rgba(0,0,0,0.35);}
 .hero p.lead{font-size:clamp(1rem,2.2vw,1.15rem);opacity:0.94;margin:0 auto;max-width:820px;text-shadow:0 6px 18px rgba(0,0,0,0.25);}
 
-main{background:white;padding:3rem 0;}
+main{
+  background:white;
+  padding:1.2rem 0;
+}
+.section-title {
+  font-family: 'IcoMoon', serif;
+  font-size: 48px;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
 main h2{color:var(--accent);font-family:"Cinzel",serif;margin-bottom:1rem;}
 
 /* Specific spacing tweak for the testimonials heading only (keeps other h2 unchanged) */
