@@ -3,15 +3,17 @@
   --accent:#ad966d;
   --accent-2:#caa86a;
   --muted:#7a7a7a;
-  --max-width:1100px;
+  --max-width:1280px;
 }
 *{box-sizing:border-box;}
 html,body{height:100%;}
 body{
   margin:0;
-  font-family:"Roboto",sans-serif;
+  font-family:"EB Garamond", serif;
   color:#222;
   background: var(--sand);
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 a{color:var(--accent); text-decoration:none;}
 a:hover{text-decoration:underline;}
@@ -20,48 +22,57 @@ a:hover{text-decoration:underline;}
 
 .top-strip{background:linear-gradient(90deg,#c3b28f,#d4c3a8);height:12px;width:100%;}
 
-
+/* ================================================================== */
+/* ESTILOS DE LA FRANJA DE CONTACTO (CORREGIDOS) */
+/* ================================================================== */
 .pre-footer-strip{
-  background: linear-gradient(180deg, #ad966d, #c3b28f);
+  background: #ad966d;
   width:100%;
-  padding:2rem 0;
+  padding: 2.5rem 20px;
   display:flex;
   align-items:center;
   justify-content:center;
+  color: white;
 }
 
-/* Estilos franja contacto */
 .pre-footer-container{
-  display:flex;
-  flex-direction:column;
   max-width:var(--max-width);
   width:100%;
-  color:white;
   font-family:"Roboto",sans-serif;
-  justify-content:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
-.pre-footer-column{
-  display:flex;
-  flex-direction:column;
-  gap:0.8rem;
-  align-items:flex-start;
-}
-.pre-footer-column h3{
+
+.pre-footer-left h3 {
   font-family:"Cinzel",serif;
   font-size:1.8rem;
-  margin-bottom:0.8rem;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
 }
-.pre-footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  width:100%;
+
+.pre-footer-left p {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
-.pre-footer-row p{
-  margin:0;
-  font-size:1.1rem;
+
+.pre-footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    padding-top: 0.5rem;
 }
-.pre-footer-row a.btn-whatsapp{
+
+.pre-footer-right p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.btn-whatsapp{
   display:inline-flex;
   align-items:center;
   gap:8px;
@@ -75,17 +86,19 @@ a:hover{text-decoration:underline;}
   font-size:1rem;
   transition:0.3s;
 }
-.pre-footer-row a.btn-whatsapp i{
+.btn-whatsapp i{
   font-size:1.2rem;
 }
-.pre-footer-row a.btn-whatsapp:hover{
+.btn-whatsapp:hover{
   background:#1ebe57;
   color:white;
 }
+/* ================================================================== */
+
 
 /* Botones hero */
 .cta-row{margin-top:1rem;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer;}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer;font-family: "Roboto", sans-serif;}
 .btn.primary{background:linear-gradient(90deg,#c3b28f,#ad966d);color:white;}
 
 /* Header */
@@ -109,6 +122,7 @@ header {
   color:var(--muted);
   text-align:center;
   line-height:1.4;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Menú principal */
@@ -118,6 +132,7 @@ nav.mainnav{
   font-weight:600;
   align-items:center;
   white-space:nowrap;
+  font-family: "Roboto", sans-serif;
 }
 nav.mainnav a{
   padding:8px 10px;
@@ -131,27 +146,99 @@ nav.mainnav a{
   gap:12px;
   align-items:center;
   font-size:0.95rem;
+  font-family: "Roboto", sans-serif;
 }
 .nav-toggle{display:none;background:transparent;border:0;font-size:1.1rem;color:var(--accent);cursor:pointer;}
 
-.hero{height:58vh;min-height:380px;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem 0;position:relative;overflow:hidden;}
-.hero::after{content:"";position:absolute;inset:0;background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.08));}
-
-.hero .bg{
+/* ================================================================== */
+/* ESTILOS DE LA GALERÍA PRINCIPAL (MODIFICADOS) */
+/* ================================================================== */
+.hero{
+  height:58vh;
+  min-height:380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:2rem 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
   position:absolute;
   inset:0;
-  background-image: url('images/casasalares.jpg');
-  background-size: cover; 
-  background-position: center; 
+  background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.08));
+  z-index: 1; /* Para que el degradado esté sobre las imágenes */
 }
-.hero .inner{position:relative;z-index:2;color:white;max-width:980px;padding:0 18px;}
+
+.hero-gallery {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Transición de fundido */
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1; /* La diapositiva activa es visible */
+}
+
+.hero .inner{
+  position:relative;
+  z-index:2; /* El texto está por encima del degradado y las imágenes */
+  color:white;
+  max-width:980px;
+  padding:0 18px;
+}
 .hero h1{font-family:"Cinzel",serif;font-size:clamp(1.6rem,4vw,2.6rem);margin-bottom:0.6rem;text-shadow:0 6px 20px rgba(0,0,0,0.35);}
-.hero p.lead{font-size:clamp(1rem,2.2vw,1.15rem);opacity:0.94;margin:0 auto;max-width:820px;text-shadow:0 6px 18px rgba(0,0,0,0.25);}
+.hero p.lead{font-size:clamp(1rem,2.2vw,1.15rem);opacity:0.94;margin:0 auto;max-width:820px;text-shadow:0 6px 18px rgba(0,0,0,0.25); font-family: "Roboto", sans-serif;}
+
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 10;
+  font-size: 1.5rem;
+  transition: background 0.3s;
+}
+.hero-nav:hover { background: rgba(0,0,0,0.6); }
+.hero-nav.prev { left: 20px; }
+.hero-nav.next { right: 20px; }
+/* ================================================================== */
+
 
 main{
   background:white;
   padding:1.2rem 0;
 }
+
+/* ================================================================== */
+/* LETRA DEL CONTENIDO PRINCIPAL MÁS GRANDE */
+/* ================================================================== */
+main .container > p:not(.section-title) {
+    font-size: 1.25rem;
+    line-height: 1.75;
+}
+/* ================================================================== */
+
 .section-title {
   font-family: 'IcoMoon', serif;
   font-size: 48px;
@@ -180,6 +267,7 @@ footer{
   font-size:0.85rem;
   text-align:center;
   padding:28px 0;
+  font-family: "Roboto", sans-serif;
 }
 footer .container{
   max-width:var(--max-width);
@@ -210,7 +298,6 @@ footer .container{
   justify-content:center;
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
   border-radius:6px;
-  font-family: 'Lato', sans-serif;
 }
 
 /* vertical bar on the left — full height of the testimonial block */
@@ -245,6 +332,7 @@ footer .container{
   color:var(--muted);
   font-style:normal;
   font-size:0.95rem;
+  font-family: "Roboto", sans-serif;
 }
 
 /* carousel nav buttons */
@@ -252,4 +340,20 @@ footer .container{
 .carousel-btn:hover {background:rgba(0,0,0,0.6);}
 .carousel-btn.prev {left:-40px;}
 .carousel-btn.next {right:-40px;}
-@media(max-width:600px){.carousel-btn.prev{left:5px;}.carousel-btn.next{right:5px;}}
+
+@media(max-width:600px){
+  .carousel-btn.prev{left:5px;}
+  .carousel-btn.next{right:5px;}
+
+  .pre-footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .pre-footer-left h3, .pre-footer-left p {
+      text-align: center;
+  }
+  .pre-footer-right {
+      align-items: center;
+  }
+}

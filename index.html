@@ -6,13 +6,9 @@
 <title>Casa Las Jaras – B1</title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&family=Roboto:wght@300;400;700&family=IcoMoon" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400&family=Roboto:wght@300;400;700&family=IcoMoon&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- ================================================================== -->
-<!-- LÍNEA AÑADIDA PARA MOSTRAR LAS BANDERAS CORRECTAMENTE -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
-<!-- ================================================================== -->
 
 <link rel="stylesheet" href="styles.css">
 
@@ -41,14 +37,11 @@
       <a href="https://www.casalasjaras.com/thearea.htm">The Area</a>
       <a href="https://www.casalasjaras.com/andalusia.htm">Andalusia</a>
 
-      <!-- ================================================================== -->
-      <!-- SECCIÓN MODIFICADA PARA USAR ICONOS DE BANDERAS EN LUGAR DE EMOJIS -->
       <div class="lang-switch">
         <a href="https://www.casalasjaras.com/nl.html"><span class="flag-icon flag-icon-nl"></span> NL</a>
         <a href="https://www.casalasjaras.com/de.html"><span class="flag-icon flag-icon-de"></span> DE</a>
         <a href="https://www.casalasjaras.com/fr.html"><span class="flag-icon flag-icon-fr"></span> FR</a>
       </div>
-      <!-- ================================================================== -->
 
     </nav>
     <button class="nav-toggle">&#9776;</button>
@@ -56,7 +49,14 @@
 </header>
 
 <section class="hero">
-  <div class="bg"></div>
+  <div class="hero-gallery">
+    <div class="slide active" style="background-image: url('images/casasalares.jpg');"></div>
+    <div class="slide" style="background-image: url('images/Jaras12.jpeg');"></div>
+    <div class="slide" style="background-image: url('images/Jaras13.jpg');"></div>
+    <div class="slide" style="background-image: url('images/Jaras15.jpg'); background-position: bottom;"></div>
+    <div class="slide" style="background-image: url('images/Jaras16.jpg');"></div>
+  </div>
+
   <div class="container inner">
     <h1>Unplug. Breathe. Live Andalusia</h1>
     <p class="lead">Secluded villa with private pool, stunning mountain views, and the real Andalusian countryside.</p>
@@ -64,6 +64,9 @@
       <a class="btn primary" href="mailto:casalasjaras@yahoo.es">Contact & Book</a>
     </div>
   </div>
+
+  <button class="hero-nav prev" aria-label="Previous image">&#10094;</button>
+  <button class="hero-nav next" aria-label="Next image">&#10095;</button>
 </section>
 
 <main>
@@ -75,8 +78,6 @@
     <p>The secluded position also makes it ideal for couples seeking naturist-friendly accommodation. Unlike hotels or shared resorts, here you will have complete privacy — the pool, sunbeds and outdoor areas are for your exclusive use, with no neighbors overlooking. Relax and enjoy your holiday exactly as you wish.</p>
     <p>And while Casa Las Jaras feels wonderfully remote, it remains easily accessible by standard vehicles, as the entire track is concreted — no 4x4 required.</p>
     <p>Discover the real Spain: unspoilt countryside, breathtaking mountain views, and glorious weather await you.</p>
-
-    <!-- Testimonials Carousel -->
     <h2 class="testimonials-heading">TESTIMONIALS – WHAT OUR GUESTS SAY</h2>
     <div class="testimonials-carousel">
       <div class="carousel-container">
@@ -159,20 +160,15 @@
 
 <div class="pre-footer-strip">
   <div class="pre-footer-container">
-    <div class="pre-footer-column">
+    <div class="pre-footer-left">
       <h3>CASA LAS JARAS</h3>
-      <div class="pre-footer-row">
-        <p>Pago Fogarate, s/n</p>
-        <p><strong>Email:</strong> <a href="mailto:casalasjaras@yahoo.es" style="color:white;">casalasjaras@yahoo.es</a></p>
-      </div>
-      <div class="pre-footer-row">
-        <p>29714 Salares</p>
-        <a class="btn-whatsapp" href="https://wa.me/34660366447" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-      </div>
-      <div class="pre-footer-row">
-        <p>Malaga, España</p>
-        <p></p>
-      </div>
+      <p>Pago Fogarate, s/n</p>
+      <p>29714 Salares</p>
+      <p>Malaga, España</p>
+    </div>
+    <div class="pre-footer-right">
+      <p><strong>Email:</strong> <a href="mailto:casalasjaras@yahoo.es" style="color:white;">casalasjaras@yahoo.es</a></p>
+      <a class="btn-whatsapp" href="https://wa.me/34660366447" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
     </div>
   </div>
 </div>
