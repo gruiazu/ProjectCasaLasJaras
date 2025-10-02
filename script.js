@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startHeroInterval();
   }
 
-  if (heroSlides.length > 0) {
+  if (heroSlides.length > 1) { // Solo activa el carrusel si hay más de una imagen
     showHeroSlide(currentHeroSlide);
     startHeroInterval();
 
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
       prevHeroSlide();
       resetHeroInterval();
     });
+  } else if (heroSlides.length === 1) {
+      showHeroSlide(0); // Muestra la única imagen si solo hay una
   }
 
 
@@ -98,6 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
   /* inicio automático */
   if (slides.length > 0) {
       startInterval();
+  }
+
+  // ==================================================================
+  // CÓDIGO PARA EL LIGHTBOX DE LA GALERÍA DE FOTOS (NUEVO)
+  // ==================================================================
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+    const closeBtn = document.querySelector('.close-lightbox');
+
+    lightboxTriggers.forEach(trigger => {
+      trigger.addEventListener('click', e => {
+        e.preventDefault();
+        lightbox.style.display = 'flex';
+        lightboxImg.src = trigger.href;
+      });
+    });
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) { // Cierra solo si se hace clic en el fondo
+            closeLightbox();
+        }
+    });
   }
 
 });
