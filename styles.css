@@ -359,11 +359,14 @@ footer .container{
 }
 
 /* ================================================================== */
-/* NUEVOS ESTILOS PARA LA PÁGINA "THE NATURAL PARK" (CORREGIDOS) */
+/* ESTILOS PARA LAS PÁGINAS INTERIORES */
 /* ================================================================== */
 
-/* Oculta las flechas de la galería principal solo en esta página */
-.page-natural-park .hero-nav {
+/* Oculta las flechas de la galería principal en páginas con una sola imagen */
+.page-natural-park .hero-nav,
+.page-inside .hero-nav,
+.page-the-area .hero-nav,
+.page-outside .hero-nav {
     display: none;
 }
 

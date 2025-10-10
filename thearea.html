@@ -8,17 +8,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400&family=Roboto:wght@300;400;700&family=IcoMoon&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<!-- ================================================================== -->
-<!-- LÍNEA AÑADIDA PARA MOSTRAR LAS BANDERAS CORRECTAMENTE -->
-<!-- ================================================================== -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
 
 <link rel="stylesheet" href="styles.css">
 
 
 </head>
-<body>
+<body class="page-the-area">
 
 <div class="top-strip"></div>
 
@@ -40,10 +36,6 @@
       <a href="https://www.casalasjaras.com/thesierra.htm">The Natural Park</a>
       <a href="https://www.casalasjaras.com/thearea.htm">The Area</a>
       <a href="https://www.casalasjaras.com/andalusia.htm">Andalusia</a>
-
-      <!-- ================================================================== -->
-      <!-- SECCIÓN MODIFICADA PARA USAR ICONOS DE BANDERAS EN LUGAR DE EMOJIS -->
-      <!-- ================================================================== -->
       <div class="lang-switch">
         <a href="https://www.casalasjaras.com/nl.html"><span class="flag-icon flag-icon-nl"></span> NL</a>
         <a href="https://www.casalasjaras.com/de.html"><span class="flag-icon flag-icon-de"></span> DE</a>
@@ -55,20 +47,14 @@
   </div>
 </header>
 
+<!-- ================================================================== -->
+<!-- SECCIÓN DE LA IMAGEN PRINCIPAL AÑADIDA -->
+<!-- ================================================================== -->
 <section class="hero">
-  <!-- Contenedor de la galería -->
   <div class="hero-gallery">
-    <!-- ================================================================== -->
-    <!-- IMPORTANTE: CAMBIA ESTAS RUTAS POR LAS DE TUS IMÁGENES -->
-    <!-- ================================================================== -->
-    <div class="slide active" style="background-image: url('images/casasalares.jpg');"></div>
-    <div class="slide" style="background-image: url('images/Jaras12.jpeg');"></div>
-    <div class="slide" style="background-image: url('images/Jaras13.jpg');"></div>
-    <div class="slide" style="background-image: url('images/Jaras15.jpg'); background-position: bottom;"></div>
-    <div class="slide" style="background-image: url('images/Jaras16.jpg');"></div>
+    <!-- CAMBIA ESTA RUTA POR LA IMAGEN QUE QUIERAS -->
+    <div class="slide active" style="background-image: url('images/Jaras14.jpg');"></div>
   </div>
-
-  <!-- Contenido de texto y botón (se mantiene fijo) -->
   <div class="container inner">
     <h1>Unplug. Breathe. Live Andalusia</h1>
     <p class="lead">Secluded villa with private pool, stunning mountain views, and the real Andalusian countryside.</p>
@@ -76,18 +62,13 @@
       <a class="btn primary" href="mailto:casalasjaras@yahoo.es">Contact & Book</a>
     </div>
   </div>
-
-  <!-- Flechas de navegación -->
+  <!-- Flechas de navegación (se ocultarán con CSS en esta página) -->
   <button class="hero-nav prev" aria-label="Previous image">&#10094;</button>
   <button class="hero-nav next" aria-label="Next image">&#10095;</button>
 </section>
 
 <main>
   <div class="container">
-    
-    <!-- ================================================================== -->
-    <!-- NUEVO CONTENIDO PARA LA PÁGINA "THE AREA" -->
-    <!-- ================================================================== -->
     <section id="the-area">
        <h2>The Area – Location & Attractions</h2>
        <p><strong>Costa del Sol · Málaga · Andalucía · Spain</strong></p>
@@ -173,11 +154,22 @@
        <h3>✨ Final Note</h3>
        <p>We could write pages and pages about the location and attractions of the area… but this is something you truly must discover for yourself.</p>
     </section>
-    <!-- ================================================================== -->
-    <!-- FIN DEL NUEVO CONTENIDO -->
-    <!-- ================================================================== -->
-
   </div>
+
+  <!-- ================================================================== -->
+  <!-- GALERÍA DE FOTOS AÑADIDA -->
+  <!-- ================================================================== -->
+  <div class="photo-grid">
+    <a href="images/Jaras33.jpg" class="lightbox-trigger"><img src="images/placeholder-1.jpg" alt="Descripción de la foto 1"></a>
+    <a href="images/Jaras34.jpg" class="lightbox-trigger"><img src="images/placeholder-2.jpg" alt="Descripción de la foto 2"></a>
+    <a href="images/Jaras35.jpg" class="lightbox-trigger"><img src="images/placeholder-3.jpg" alt="Descripción de la foto 3"></a>
+    <a href="images/Jaras30.jpg" class="lightbox-trigger"><img src="images/placeholder-4.jpg" alt="Descripción de la foto 4"></a>
+    <a href="images/Jaras31.jpg" class="lightbox-trigger"><img src="images/placeholder-5.jpg" alt="Descripción de la foto 5"></a>
+    <a href="images/Jaras36.jpg" class="lightbox-trigger"><img src="images/placeholder-6.jpg" alt="Descripción de la foto 6"></a>
+    <a href="images/Jaras37.jpg" class="lightbox-trigger"><img src="images/placeholder-7.jpg" alt="Descripción de la foto 7"></a>
+    <a href="images/Jaras29.jpg" class="lightbox-trigger"><img src="images/placeholder-8.jpg" alt="Descripción de la foto 8"></a>
+  </div>
+
 </main>
 
 <div class="pre-footer-strip">
@@ -200,6 +192,12 @@
     2025 © Casa Las Jaras – all rights reserved
   </div>
 </footer>
+
+<div id="lightbox" class="lightbox">
+  <span class="close-lightbox">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
 <script src="script.js"></script>
 
 </body>
