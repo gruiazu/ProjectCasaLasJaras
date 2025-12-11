@@ -19,12 +19,8 @@ a{color:var(--accent); text-decoration:none;}
 a:hover{text-decoration:underline;}
 .container{max-width:var(--max-width);margin:0 auto;padding:0 20px;}
 
-
 .top-strip{background:linear-gradient(90deg,#c3b28f,#d4c3a8);height:12px;width:100%;}
 
-/* ================================================================== */
-/* ESTILOS DE LA FRANJA DE CONTACTO (CORREGIDOS) */
-/* ================================================================== */
 .pre-footer-strip{
   background: #ad966d;
   width:100%;
@@ -93,15 +89,11 @@ a:hover{text-decoration:underline;}
   background:#1ebe57;
   color:white;
 }
-/* ================================================================== */
 
-
-/* Botones hero */
 .cta-row{margin-top:1rem;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer;font-family: "Roboto", sans-serif;}
 .btn.primary{background:linear-gradient(90deg,#c3b28f,#ad966d);color:white;}
 
-/* Header */
 header {
   background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.6));
   position: sticky;
@@ -125,7 +117,6 @@ header {
   font-family: "Roboto", sans-serif;
 }
 
-/* Menú principal */
 nav.mainnav{
   display:flex;
   gap:12px;
@@ -150,9 +141,6 @@ nav.mainnav a{
 }
 .nav-toggle{display:none;background:transparent;border:0;font-size:1.1rem;color:var(--accent);cursor:pointer;}
 
-/* ================================================================== */
-/* ESTILOS DE LA GALERÍA PRINCIPAL (MODIFICADOS) */
-/* ================================================================== */
 .hero{
   height:58vh;
   min-height:380px;
@@ -169,7 +157,7 @@ nav.mainnav a{
   position:absolute;
   inset:0;
   background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.08));
-  z-index: 1; /* Para que el degradado esté sobre las imágenes */
+  z-index: 1;
 }
 
 .hero-gallery {
@@ -187,17 +175,17 @@ nav.mainnav a{
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out; /* Transición de fundido */
+  transition: opacity 1.5s ease-in-out;
   z-index: 0;
 }
 
 .slide.active {
-  opacity: 1; /* La diapositiva activa es visible */
+  opacity: 1;
 }
 
 .hero .inner{
   position:relative;
-  z-index:2; /* El texto está por encima del degradado y las imágenes */
+  z-index:2;
   color:white;
   max-width:980px;
   padding:0 18px;
@@ -222,22 +210,17 @@ nav.mainnav a{
 .hero-nav:hover { background: rgba(0,0,0,0.6); }
 .hero-nav.prev { left: 20px; }
 .hero-nav.next { right: 20px; }
-/* ================================================================== */
-
 
 main{
   background:white;
   padding-top:1.2rem;
+  padding-bottom: 3rem;
 }
 
-/* ================================================================== */
-/* LETRA DEL CONTENIDO PRINCIPAL MÁS GRANDE */
-/* ================================================================== */
 main .container > p:not(.section-title) {
     font-size: 1.25rem;
     line-height: 1.75;
 }
-/* ================================================================== */
 
 .section-title {
   font-family: 'IcoMoon', serif;
@@ -247,20 +230,10 @@ main .container > p:not(.section-title) {
 }
 main h2{color:var(--accent);font-family:"Cinzel",serif;margin-bottom:1rem;}
 
-/* Specific spacing tweak for the testimonials heading only (keeps other h2 unchanged) */
 .testimonials-heading{ margin-bottom:0.35rem; }
 
-/* Reduce the gap between the testimonials heading and the carousel */
 .testimonials-carousel { margin-top:0.35rem; position: relative; padding:0.6rem 0; }
 
-@media(max-width:1000px){
-  nav.mainnav{flex-wrap:wrap;}
-  .lang-switch{margin-left:0;margin-top:8px;}
-}
-@media(max-width:800px){nav.mainnav{display:none;}.nav-toggle{display:inline-block;}}
-@media(max-width:420px){.gallery img{height:100px;}}
-
-/* Footer */
 footer{
   background:white;
   color:#999;
@@ -275,22 +248,15 @@ footer .container{
   padding:0 20px;
 }
 
-/* Carousel Testimonials */
-/* carousel-container and track */
 .carousel-container {position: relative; width: 100%; padding: 0 2rem;}
 .carousel-track-wrapper {overflow: hidden; width: 100%;}
 .carousel-track {display: flex; transition: transform 0.6s ease;}
 
-/* Testimonial card:
-   - keep it visually consistent
-   - vertical bar as a pseudo-element that spans full height of the card
-   - text limited to 3 lines and justified
-*/
 .testimonial {
   position: relative;
   min-width:100%;
   box-sizing:border-box;
-  padding:1.6rem 2rem 1.6rem 2.5rem; /* leave space for the bar on the left */
+  padding:1.6rem 2rem 1.6rem 2.5rem;
   font-style: italic;
   background:#fff;
   display:flex;
@@ -300,7 +266,6 @@ footer .container{
   border-radius:6px;
 }
 
-/* vertical bar on the left — full height of the testimonial block */
 .testimonial::before {
   content: "";
   position: absolute;
@@ -312,7 +277,6 @@ footer .container{
   border-radius: 2px;
 }
 
-/* paragraph: justified + clamp to 3 lines */
 .testimonial p {
   margin:0 0 0.6rem 0;
   line-height:1.5;
@@ -323,7 +287,6 @@ footer .container{
   overflow: hidden;
 }
 
-/* who */
 .testimonial .who {
   display:block;
   text-align:left;
@@ -335,47 +298,24 @@ footer .container{
   font-family: "Roboto", sans-serif;
 }
 
-/* carousel nav buttons */
 .carousel-btn {position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.35); color:#fff; border:none; padding:0.5rem 0.8rem; cursor:pointer; border-radius:50%; z-index:10; font-size:1.2rem;}
 .carousel-btn:hover {background:rgba(0,0,0,0.6);}
 .carousel-btn.prev {left:-40px;}
 .carousel-btn.next {right:-40px;}
 
-@media(max-width:600px){
-  .carousel-btn.prev{left:5px;}
-  .carousel-btn.next{right:5px;}
-
-  .pre-footer-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-  }
-  .pre-footer-left h3, .pre-footer-left p {
-      text-align: center;
-  }
-  .pre-footer-right {
-      align-items: center;
-  }
-}
-
-/* ================================================================== */
-/* ESTILOS PARA LAS PÁGINAS INTERIORES */
-/* ================================================================== */
-
-/* Oculta las flechas de la galería principal en páginas con una sola imagen */
 .page-natural-park .hero-nav,
 .page-inside .hero-nav,
 .page-the-area .hero-nav,
-.page-outside .hero-nav {
+.page-outside .hero-nav,
+.page-andalusia .hero-nav {
     display: none;
 }
 
-/* Estilos para la parrilla de fotos full-width */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
-    margin-top: 3rem; /* Espacio entre el texto y la galería */
+    margin-top: 3rem;
 }
 
 .photo-grid a {
@@ -385,12 +325,11 @@ footer .container{
 
 .photo-grid img {
     width: 100%;
-    height: 350px; /* Altura de las imágenes más grande */
+    height: 350px;
     object-fit: cover;
     display: block;
 }
 
-/* Estilos del Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -425,8 +364,50 @@ footer .container{
   color: #bbb;
 }
 
+.prices-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-/* Ajustes para pantallas más pequeñas (responsive) */
+.prices-table th, .prices-table td {
+  border: 1px solid #e0d9cd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.prices-table th {
+  background-color: var(--sand);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.prices-table tr:nth-child(even) {
+  background-color: #fdfbf7;
+}
+
+.booking-conditions h3 {
+  font-family: "Cinzel", serif;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.booking-conditions p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+@media(max-width:1000px){
+  nav.mainnav{flex-wrap:wrap;}
+  .lang-switch{margin-left:0;margin-top:8px;}
+}
+@media(max-width:800px){nav.mainnav{display:none;}.nav-toggle{display:inline-block;}}
+
 @media (max-width: 900px) {
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -434,6 +415,23 @@ footer .container{
     .photo-grid img {
         height: 300px;
     }
+}
+
+@media(max-width:600px){
+  .carousel-btn.prev{left:5px;}
+  .carousel-btn.next{right:5px;}
+
+  .pre-footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .pre-footer-left h3, .pre-footer-left p {
+      text-align: center;
+  }
+  .pre-footer-right {
+      align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
