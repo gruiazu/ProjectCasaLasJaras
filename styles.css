@@ -364,6 +364,37 @@ footer .container{
   color: #bbb;
 }
 
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 1001;
+  font-size: 2rem;
+  transition: background 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.lightbox-nav:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.lightbox-nav.prev {
+  left: 20px;
+}
+
+.lightbox-nav.next {
+  right: 20px;
+}
+
 .prices-table {
   width: 100%;
   border-collapse: collapse;
