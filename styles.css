@@ -103,6 +103,12 @@ header {
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;}
+
+/* ESTA ES LA SECCIÓN CORREGIDA */
+.brand {
+  flex-shrink: 0; /* <-- ESTA ES LA LÍNEA QUE ARREGLA TODO */
+}
+
 .brand .title{
   font-family: "Cinzel", serif;
   font-size:1.4rem;
@@ -437,7 +443,41 @@ footer .container{
   nav.mainnav{flex-wrap:wrap;}
   .lang-switch{margin-left:0;margin-top:8px;}
 }
-@media(max-width:800px){nav.mainnav{display:none;}.nav-toggle{display:inline-block;}}
+@media(max-width:800px){
+  .nav-toggle{
+    display:inline-block;
+  }
+  nav.mainnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  nav.mainnav.is-active {
+    display: flex;
+  }
+  nav.mainnav a {
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .lang-switch {
+    margin-left: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 80%;
+    justify-content: center;
+  }
+}
 
 @media (max-width: 900px) {
     .photo-grid {
@@ -472,4 +512,8 @@ footer .container{
     .photo-grid img {
         height: 280px;
     }
+}
+
+#hero-image-the-area {
+  background-position: 30% 50%;
 }
