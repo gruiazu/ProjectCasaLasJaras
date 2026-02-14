@@ -102,11 +102,10 @@ header {
   backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;}
 
-/* ESTA ES LA SECCIÓN CORREGIDA */
 .brand {
-  flex-shrink: 0; /* <-- ESTA ES LA LÍNEA QUE ARREGLA TODO */
+  flex-shrink: 0;
 }
 
 .brand .title{
@@ -145,7 +144,7 @@ nav.mainnav a{
   font-size:0.95rem;
   font-family: "Roboto", sans-serif;
 }
-.nav-toggle{display:none;background:transparent;border:0;font-size:1.1rem;color:var(--accent);cursor:pointer;}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.1rem;color:var(--accent);cursor:pointer; z-index: 50;}
 
 .hero{
   height:58vh;
@@ -313,7 +312,8 @@ footer .container{
 .page-inside .hero-nav,
 .page-the-area .hero-nav,
 .page-outside .hero-nav,
-.page-andalusia .hero-nav {
+.page-andalusia .hero-nav,
+.page-prices .hero-nav {
     display: none;
 }
 
@@ -443,6 +443,7 @@ footer .container{
   nav.mainnav{flex-wrap:wrap;}
   .lang-switch{margin-left:0;margin-top:8px;}
 }
+
 @media(max-width:800px){
   .nav-toggle{
     display:inline-block;
@@ -453,13 +454,14 @@ footer .container{
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(246, 239, 228, 0.95);
     backdrop-filter: blur(5px);
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     border-top: 1px solid rgba(0,0,0,0.05);
+    white-space: normal;
   }
   nav.mainnav.is-active {
     display: flex;
@@ -468,6 +470,7 @@ footer .container{
     padding: 12px 20px;
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
   .lang-switch {
     margin-left: 0;

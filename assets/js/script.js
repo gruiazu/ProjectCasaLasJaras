@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // CÓDIGO PARA EL LIGHTBOX DE LA GALERÍA (ACTUALIZADO)
+  // CÓDIGO PARA EL LIGHTBOX DE LA GALERÍA
   const lightbox = document.getElementById('lightbox');
   if (lightbox) {
     const lightboxImg = document.getElementById('lightbox-img');
@@ -123,13 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxTriggers.forEach(trigger => {
       trigger.addEventListener('click', e => {
         e.preventDefault();
-        
         const currentGallery = trigger.closest('.photo-grid');
         const allTriggersInGallery = currentGallery.querySelectorAll('.lightbox-trigger');
         galleryImages = Array.from(allTriggersInGallery).map(t => t.href);
-        
         const startIndex = galleryImages.indexOf(trigger.href);
-
         lightbox.style.display = 'flex';
         showImage(startIndex);
       });
@@ -151,14 +148,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('keydown', e => {
       if (lightbox.style.display === 'flex') {
-        if (e.key === 'ArrowRight') {
-          showNextImage();
-        } else if (e.key === 'ArrowLeft') {
-          showPrevImage();
-        } else if (e.key === 'Escape') {
-          closeLightbox();
-        }
+        if (e.key === 'ArrowRight') showNextImage();
+        else if (e.key === 'ArrowLeft') showPrevImage();
+        else if (e.key === 'Escape') closeLightbox();
       }
+    });
+  }
+  
+  // CÓDIGO PARA EL MENÚ MÓVIL (HAMBURGUESA)
+  const navToggle = document.querySelector('.nav-toggle');
+  const mainNav = document.querySelector('.mainnav');
+
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('is-active');
     });
   }
 
