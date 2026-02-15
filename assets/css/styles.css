@@ -229,7 +229,7 @@ main .container > p:not(.section-title) {
 
 .section-title {
   font-family: 'IcoMoon', serif;
-  font-size: 48px;
+  font-size: 36px; /* <-- CAMBIO REALIZADO AQUÍ (antes 48px) */
   color: var(--accent);
   margin-bottom: 1rem;
 }
@@ -443,7 +443,6 @@ footer .container{
   nav.mainnav{flex-wrap:wrap;}
   .lang-switch{margin-left:0;margin-top:8px;}
 }
-
 @media(max-width:800px){
   .nav-toggle{
     display:inline-block;
