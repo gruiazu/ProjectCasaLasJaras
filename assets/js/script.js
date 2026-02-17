@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // CÓDIGO PARA LA GALERÍA PRINCIPAL (HERO)
   const heroSlides = document.querySelectorAll('.hero-gallery .slide');
   if (heroSlides.length > 0) {
     const heroNextButton = document.querySelector('.hero-nav.next');
@@ -155,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  // CÓDIGO PARA EL MENÚ MÓVIL (HAMBURGUESA)
   const navToggle = document.querySelector('.nav-toggle');
   const mainNav = document.querySelector('.mainnav');
 
